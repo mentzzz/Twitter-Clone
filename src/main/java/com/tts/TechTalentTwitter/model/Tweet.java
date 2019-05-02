@@ -24,14 +24,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @SpringBootApplication
 
 
-//@Data
-//@Builder
-//@AllArgsConstructor
+@Data
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor
 @Entity
 public class Tweet {
@@ -51,12 +53,45 @@ public class Tweet {
 	
 		
 	@CreationTimestamp 
-	private Date createdAt;
+	public Date createdAt;
+
+
+
+
+	public String getMessage() {
+		return message;
+	}
+
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+
+
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user= user;
+	}
+
 	
-//	@ManyToMany(fetch = FetchType.LAZY, cascade = { CascadeType.PERSIST, CascadeType.MERGE })
-//	@JoinTable(name = "tweet_tag", joinColumns = @JoinColumn(name = "tweet_id"),
-//	    inverseJoinColumns = @JoinColumn(name = "tag_id"))
-//	private List<Tag> tags;
+	@ManyToMany(fetch = FetchType.LAZY, cascade = { CascadeType.PERSIST, CascadeType.MERGE })
+	@JoinTable(name = "tweet_tag", joinColumns = @JoinColumn(name = "tweet_id"),
+	    inverseJoinColumns = @JoinColumn(name = "tag_id"))
+	@Getter
+	@Setter
+	private List<Tag> tags;
 	
 	
 }

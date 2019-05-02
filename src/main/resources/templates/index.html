@@ -10,13 +10,8 @@
 
 <body>
         <div th:replace="fragments/navbar"></div>
-        <div class="container left-half left-pad">
-            <h5><i class="fas fa-search">   Follow Your Interests.</i>
-                <i class="fas fa-users">   Hear What People Are Talking About.</i>
-                <i class="far fa-comments">   Join The Conversation.</i></h5>
-        </div>
-    <div class="container right-half">
-        <h3>See What's Happening In The World Right Now</h3>
+    <div class="container1 right-half1">
+        <h2>See What's Happening In The World Right Now</h2>
         <h4>Join Twitter Today.</h4> 
         <form th:action="@{/login}" method="post"><br/>
             <input type="text" id="username" name="username" th:placeholder="Username" class="form-control"/> <br/>
