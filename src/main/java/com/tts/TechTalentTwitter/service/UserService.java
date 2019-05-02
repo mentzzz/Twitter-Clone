@@ -20,14 +20,11 @@ import lombok.Setter;
 
 
 public class UserService {
-	@Getter
-	@Setter
+	
 	private UserRepository userRepository;
-	@Getter
-	@Setter
+	
 	private RoleRepository roleRepository;
-	@Getter
-	@Setter
+	
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
 	
 	@Autowired
