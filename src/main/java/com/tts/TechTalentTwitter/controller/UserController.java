@@ -9,9 +9,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.tts.TechTalentTwitter.model.Tweet;
+//import com.tts.TechTalentTwitter.model.Tweet;
 import com.tts.TechTalentTwitter.model.User;
-import com.tts.TechTalentTwitter.service.TweetService;
+//import com.tts.TechTalentTwitter.service.TweetService;
 import com.tts.TechTalentTwitter.service.UserService;
 
 @Controller
@@ -20,9 +20,9 @@ public class UserController {
     @Autowired
     private UserService userService;
     
-    @Autowired
-    private TweetService tweetService;
-    
+//    @Autowired
+//    private TweetService tweetService;
+//    
     public String username;
     
     @GetMapping(value = "/users/{username}")
@@ -46,7 +46,7 @@ public class UserController {
     	public String getUsers(Model model) {
     	    List<User> users = userService.findAll();
     	    model.addAttribute("users", users);
-    	    SetTweetCounts(users, model);
+//    	    SetTweetCounts(users, model);
     	    User loggedInUser = userService.getLoggedInUser();
     	    List<User> usersFollowing = loggedInUser.getFollowing();
     	    SetFollowingStatus(users, usersFollowing, model);
@@ -68,13 +68,13 @@ public class UserController {
     	}
     	
 		
-    	private void SetTweetCounts(List<User> users, Model model) {
-    	    HashMap<String,Integer> tweetCounts = new HashMap<>(); 
-    	    for (User user : users) {
-    	        List<Tweet> tweets = tweetService.findAllByUser(user);
-    	        tweetCounts.put(user.getUsername(), tweets.size());
-    	    }
-    	    model.addAttribute("tweetCounts", tweetCounts);
-    	}
+//    	private void SetTweetCounts(List<User> users, Model model) {
+//    	    HashMap<String,Integer> tweetCounts = new HashMap<>(); 
+//    	    for (User user : users) {
+//    	        List<Tweet> tweets = tweetService.findAllByUser(user);
+//    	        tweetCounts.put(user.getUsername(), tweets.size());
+//    	    }
+//    	    model.addAttribute("tweetCounts", tweetCounts);
+//    	}
     	
     }
