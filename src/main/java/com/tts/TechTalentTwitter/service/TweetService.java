@@ -8,12 +8,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import org.ocpsoft.prettytime.PrettyTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Service;
-
 import com.tts.TechTalentTwitter.model.Tag;
 import com.tts.TechTalentTwitter.model.Tweet;
 import com.tts.TechTalentTwitter.model.User;
@@ -74,9 +71,28 @@ public class TweetService {
 	        
     @Autowired
     private TweetRepository tweetRepository;
+   
     
 	
-    public List<Tweet> findAllByUser(User user) {
+    public TagRepository getTagRepository() {
+		return tagRepository;
+	}
+
+	public void setTagRepository(TagRepository tagRepository) {
+		this.tagRepository = tagRepository;
+	}
+
+	public TweetRepository getTweetRepository() {
+		return tweetRepository;
+	}
+
+	public void setTweetRepository(TweetRepository tweetRepository) {
+		this.tweetRepository = tweetRepository;
+	}
+
+	
+
+	public List<Tweet> findAllByUser(User user) {
         List<Tweet> tweets = tweetRepository.findAllByUserOrderByCreatedAtDesc(user);
         return tweets;
     }

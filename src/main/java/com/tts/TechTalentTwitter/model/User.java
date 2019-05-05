@@ -48,7 +48,7 @@ public class User {
     @NotEmpty(message = "Please provide an email")
     @Getter
     @Setter
-    private String email;
+    public String email;
     
     @NotEmpty(message = "Please provide a username")
     @Length(min = 3, message = "Your username must have at least 3 characters")
@@ -56,7 +56,7 @@ public class User {
     @Pattern(regexp="[^\\s]+", message="Your username cannot contain spaces")
     @Getter
     @Setter
-    private String username;
+    public String username;
     
     @Length(min = 5, message = "Your password must have at least 5 characters")
     @NotEmpty(message = "Please provide a password")
@@ -68,12 +68,12 @@ public class User {
     @NotEmpty(message = "Please provide your first name")
     @Getter
     @Setter
-    private String firstName;
+    public String firstName;
     
     @NotEmpty(message = "Please provide your last name")
     @Getter
     @Setter
-    private String lastName;
+    public String lastName;
     
     private int active;
     

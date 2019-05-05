@@ -11,7 +11,8 @@
 <body>
         <div th:replace="fragments/navbar"></div>
         <div class="container left-half left-pad">
-            <h5><i class="fas fa-search">   Follow Your Interests.</i>
+            <h5>
+                <i class="fas fa-search">   Follow Your Interests.</i>
                 <i class="fas fa-users">   Hear What People Are Talking About.</i>
                 <i class="far fa-comments">   Join The Conversation.</i></h5>
         </div>
@@ -24,10 +25,10 @@
             <div align="center" th:if="${param.error}">
                 <h4 style="color: red">Login unsuccessful.</h4>
             </div>
-            <button class="btn btn-md btn-success btn-block" name="Submit" value="Login" type="Submit">Log in</button> 
+            <button class="btn btn-md btn-primary btn-block" name="Submit" value="Login" type="Submit">Log in</button> 
         </form>
         <form th:action="@{/signup}" method="get"><br/>
-         <button class="btn btn-md btn-success btn-block" name="Submit" value="Register" type="Submit">Sign Up</button> 
+         <button class="btn btn-md btn-light btn-block" name="Submit" value="Register" type="Submit">Sign Up</button> 
         </form>     
     </div>
 </body>

@@ -28,10 +28,10 @@
     		<p class="mb-1" th:utext="${tweet.message}"></p>
         </div>
     </div>
-<form th:action="@{/follow/} + ${user.username}" th:if="${!following && !isSelfPage}}" method="post">
+<!-- <form th:action="@{/follow/} + ${user.username}" th:if="${!following && !isSelfPage}}" method="post">
     <button style="float:right" type="Submit" class="btn btn-lg btn-success">Follow</button>
 </form>
 <form th:action="@{/unfollow/} + ${user.username}" th:if="${following && !isSelfPage}}" method="post">
     <button id="unfollow_btn" style="float:right" type="Submit" class="btn btn-lg btn-primary">Following</button>
-</form>
+</form> -->
 </body>

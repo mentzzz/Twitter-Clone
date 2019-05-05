@@ -33,7 +33,10 @@
             </div>
             <div class="form-group">
                 <button class="btn btn-md btn-success btn-block" name="Submit" value="Submit" type="Submit" th:text="Submit"></button>
-            </div>
+           </div>
         </form>
+        <div th:if="${successMessage}">
+            <h3><span class="text-success" th:utext="${successMessage}"></span></h3>
+        </div> 
     </div>
 </body>
