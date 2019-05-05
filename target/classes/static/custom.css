@@ -1,0 +1,68 @@
+.btn {
+    width: 200px;
+    border-radius: 12px;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    position: relative;
+
+}
+
+h3 {
+    font-size: 27px;
+    line-height: 32px;
+    text-rendering: optimizeLegibility;
+    display: block;
+    font-size: 2em;
+    margin: 0;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.container {
+    display: table;
+    width: 100%;
+}
+
+.left-half {
+    background-color: deepskyblue;
+    background-size: cover;
+    position: absolute;
+    left: 0px;
+    width: 50%;
+      
+}
+
+.right-half {
+	position: absolute;
+    right: 0px;
+    width: 50%;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    padding-left: 100px;
+    padding-right: 130px;    
+}
+
+.left-pad {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    padding-left: 150px;
+    
+}
+
+h5 {
+    padding-bottom: 80px;
+    margin-bottom: 50px;
+}
+ .fas {
+     padding-bottom: 50px;
+ }
+
+ .btn-light {
+     border: black;
+     border-width: 1px;
+     border-style: solid;
+ }
